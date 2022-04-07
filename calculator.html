@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Indie+Flower&family=Rubik+Puddles&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <style>
+
+        body{
+          background-color: rgb(125, 227, 193);
+        }
+        #cal1{
+          font-family: 'Rubik Wet Paint', cursive;
+        }
+        .container{
+          display: flex;
+          justify-content: center;
+        }
+        .back{
+            /* border: 2px solid rgb(245, 240, 240); */
+            border-radius: 40px;
+            background-color: rgb(125, 227, 193);
+            display: block;
+            display: grid;
+            margin: 40px;
+            height: 400px;
+            width: 400px;
+            
+        }
+        .ans{
+            border: 2px solid black;
+            border-radius:50px ;
+            background-color: black;
+            color: aliceblue;
+            height: 100px;
+            text-align: center;
+        }
+        table{
+            height: 300px;
+        }
+        table{
+    margin:none;
+    color:black;
+    font-size: larger;
+    background-color: rgb(125, 227, 193);
+   
+    
+}
+table{
+    background-color: rgb(125, 227, 193);
+}
+        tr,td{
+            border: 5px solid rgb(125, 227, 193);
+            border-collapse: separate;
+            border-radius: 50px;
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+            border-spacing: 5px;
+            
+        }
+        button{
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+            text-decoration: none;
+        }
+        /* .container{
+          border: 2px solid red;
+        } */
+        #he12,#he13{
+            padding-right: 5px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info" id="hello1">
+      <img src="calculator.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
+          
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a id="cal1" class="nav-link" href="#">CALCULATOR: <span class="sr-only">(current)</span></a>
+            </li>
+            
+          </ul>
+          <a id="he12" href="https://www.linkedin.com/in/jugya-kamal-gogoi-5ab594229/" target="_blank"><img id="qqq" src="linkedin-logo.png" width="30" height="30" class="d-inline-block align-top " alt=""></a>
+          <a id="he13" href="https://github.com/Jugya07" target="_blank"><img id="qqq" src="github.png" width="30" height="30" class="d-inline-block align-top " alt=""></a>
+          <img id="qqq" src="j.png" width="30" height="30" class="d-inline-block align-top " alt="">
+          <img id="eee" src="k.png" width="30" height="30" class="d-inline-block align-top " alt="">
+        <!-- </div> -->
+      </nav>
+      <div class="container">
+      <div id="cal" class="back" >
+          <div class="ans" >
+              <h3 id="ans1"></h3>
+          </div>
+          <table>
+              <tr >
+                  <td><button type="button" class="btn btn-dark" onclick="ans1.textContent=''">ac</button></td>
+                  <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='+'">+</button></td>
+                  <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='-'">-</button></td>
+                  <td><button type="button" class="btn btn-dark" onclick="ans1.textContent=result()">=</button></td>
+              </tr>
+              <tr >
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='7'">7</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='8'">8</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='9'">9</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='*'">x</button></td>
+            </tr>
+            <tr >
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='4'">4</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='5'">5</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='6'">6</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='/'">/</button></td>
+                
+            </tr>
+            <tr >
+                <td><button id="btn1" type="button" class="btn btn-dark" onclick="ans1.textContent+='1'">1</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='2'">2</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='3'">3</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='%'">%</button></td>
+                
+            </tr>
+            <tr >
+                <td colspan="3"><button type="button" class="btn btn-dark" onclick="ans1.textContent+='0'">0</button></td>
+                <td><button type="button" class="btn btn-dark" onclick="ans1.textContent+='.'">.</button></td>
+                
+            </tr>
+              
+          </table>
+      </div>
+    </div>
+    
+      <script>
+         function result(){
+           let x=eval(ans1.textContent)
+           return x
+         }
+      </script>
+</body>
+</html>
